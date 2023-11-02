@@ -1,12 +1,14 @@
-import Transaction from './components/transactions/Transaction';
-import TRANSACTION_DATA from './api/mock_data';
+// src/App.jsx
+import TransactionList from './components/transactions/TransactionList';
+import PlacesList from './components/places/PlacesList';
+import { ThemeContext, themes } from './context/Theme.context';
+import { useContext } from 'react';
+import { IoSunny, IoMoonSharp } from 'react-icons/io5';
 
 function App() {
   return (
     <div className='App'>
-      {TRANSACTION_DATA.map((trans) => (
-        <Transaction {...trans} />
-      ))}
+      <Transaction />
     </div>
   );
 }
